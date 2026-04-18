@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated frames / outputs in image/ (folder kept via .gitkeep)
+image/*
+!image/.gitkeep
