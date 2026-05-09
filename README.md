@@ -25,15 +25,23 @@ $$
 
 The network predicts horizontal position `x(t)` and vertical position `y(t)` over time.
 
+<p align="center">
+  <img src="image/Picture2.png" alt="Projectile motion diagram" width="380">
+</p>
+
 ## Network architecture
 
-![PINN architecture](image/Picture1.png)
+<p align="center">
+  <img src="image/Picture1.png" alt="PINN architecture" width="420">
+</p>
 
 ## Training in action
 
 The PINN gradually learns to satisfy both the sparse data points and the governing ODEs:
 
-![PINN training animation](image/pinn.gif)
+<p align="center">
+  <img src="image/pinn.gif" alt="PINN training animation" width="500">
+</p>
 
 ## Requirements
 
