@@ -10,5 +10,9 @@ venv/
 .ipynb_checkpoints/
 
 # Generated frames / outputs in image/ (folder kept via .gitkeep)
+# Whitelist the figures used in the README and notebook; ignore intermediate training frames.
 image/*
 !image/.gitkeep
+!image/Picture1.png
+!image/Picture2.png
+!image/pinn.gif
