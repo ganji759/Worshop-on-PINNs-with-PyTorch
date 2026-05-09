@@ -1,8 +1,14 @@
 # PINNs Workshop (PyTorch)
 
-This project contains a Jupyter Notebook implementation of a Physics-Informed Neural Network (PINN) in PyTorch for projectile motion under uniform gravity.
+A hands-on workshop that builds a Physics-Informed Neural Network (PINN) from scratch in PyTorch, using projectile motion under uniform gravity as the running example.
 
-The model is trained with very few data points while also enforcing the governing physics equations.
+By the end of this session, you will be able to:
+
+- Explain what a PINN is and why embedding physics into the loss function helps when data is scarce.
+- Build a small feedforward network in PyTorch and use `torch.autograd.grad` to compute the second derivatives needed for the ODE residual.
+- Combine three loss terms — sparse data, initial conditions, and the governing ODEs — into a single objective and balance their weights.
+- Train the network with Adam, monitor the data and physics losses separately, and produce an animation of the learning process.
+- Evaluate the trained PINN against the analytical solution and reason about where (and why) it extrapolates well or poorly.
 
 ## Overview
 
@@ -19,6 +25,16 @@ $$
 
 The network predicts horizontal position `x(t)` and vertical position `y(t)` over time.
 
+## Network architecture
+
+![PINN architecture](image/Picture1.png)
+
+## Training in action
+
+The PINN gradually learns to satisfy both the sparse data points and the governing ODEs:
+
+![PINN training animation](image/pinn.gif)
+
 ## Requirements
 
 - Python 3.8+
@@ -33,12 +49,14 @@ Install dependencies:
 pip install torch matplotlib numpy pillow
 ```
 
+For a build of PyTorch matched to your OS, package manager, and CUDA version, follow the official instructions: [pytorch.org/get-started/locally](https://pytorch.org/get-started/locally/).
+
 ## Run
 
 Launch the notebook:
 
 ```bash
-jupyter notebook "Pinns workshop with PyTorch.ipynb"
+jupyter notebook Pinns_workshop_with_PyTorch.ipynb
 ```
 
 ## Notes
